@@ -3,7 +3,7 @@
 #include <iostream>
 
 
-class printStatus 
+class printStatus final
 {
 private:
 
@@ -27,16 +27,16 @@ printStatus::printStatus() {
  
 
 printStatus::printStatus(const char* name, int hp, int attack) {
-     name_ = name;
-	 hp_ = hp;
-	 attack_ = attack;
-{
+	name_ = name;
+	hp_ = hp;
+	attack_ = attack;
+
 	std::cout << "コンストラクタが呼ばれました" << std::endl;
 }
 
 int main()
 {
-
+	printStatus PrintStatus;
 	printStatus PrintStatus1("動物", 100, 10);
 }
 
