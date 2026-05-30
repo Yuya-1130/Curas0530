@@ -8,29 +8,33 @@ class Status
 	int attack_ = 0;
 
 public:
-	void charstatusA();
+	void charstatusA(std::string name, int hp, int attack); // 引数付き宣言に修正
 
-	int charstatusB();
+	void charstatusB();
 };
 
-void Status::charstatusA() {
+void Status::charstatusA(std::string name, int hp, int attack) {
 	std::cout << "コンストラクタが呼ばれました" << std::endl;
-	name_ = "動物";
-	hp_ = 100;
-	attack_ = 10;
+	name_ = name;
+	hp_ = hp;
+	attack_ = attack;
 }
 
-int Status::charstatusB() {
+void Status::charstatusB() {
 	std::cout << "コンストラクタが呼ばれました" << std::endl;
 	name_ = "動物";
 	hp_ = 100;
 	attack_ = 10;
-	return 0;
 }
  
 int main()
 {
 	Status status;
-	status.charstatusA();
+	Status status2;
+
+	const Status ructorStatus;
+	const Status ructorStatus2;
+
+	status.charstatusA("勇者", 150, 20);
 	status.charstatusB();
 }
